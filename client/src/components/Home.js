@@ -1,4 +1,4 @@
-import "../home.css";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import mango from "../images/mango.png";
 import fruits from "../images/fruits.png";
@@ -12,24 +12,22 @@ const Home = () => {
       <main className="flex items-center justify-center">
         <section className="glass flex flex-col lg:flex-row">
           <div className="dashboard">
-            <div className="pro m-5 md:m-0">
+            
+            <Link to="/product/mangoes" className="pro m-5 md:m-0">
               <h2 className="py-0 md:py-1">Mangoes</h2>
-              <Link to="/product/mangoes">
-                <img src={mango} alt="" />
+              <img src={mango} alt="" />
               </Link>
-            </div>
-            <div className="pro m-5 md:m-0">
+           
+            <Link to="/product/fruits" className="pro m-5 md:m-0">
               <h2 className="py-0 md:py-1">Fruits</h2>
-              <Link to="/product/fruits">
-                <img src={fruits} alt="" />
+              <img src={fruits} alt="" />
               </Link>
-            </div>
-            <div className="pro m-5 md:m-0">
+
+            <Link to="/product/vegetables" className="pro m-5 md:m-0">
               <h2 className="py-0 md:py-1">Vegetables</h2>
-              <Link to="/product/vegetables">
-                <img src={vegetables} alt="" />
+              <img src={vegetables} alt="" />
               </Link>
-            </div>
+           
           </div>
 
           <div className="games m-0 mt-5 md:m-5">
@@ -67,24 +65,22 @@ const Home = () => {
             </div>
           </div>
           <div className="dashboard">
-            <div className="pro m-5 md:m-0">
+           
+            <Link to="/product/cookingoil" className="pro m-5 md:m-0">
               <h2 className="py-0 md:py-1">Cooking Oil</h2>
-              <Link to="/product/cookingoil">
-                <img src={cookingoil} alt="" />
+              <img src={cookingoil} alt="" />
               </Link>
-            </div>
-            <div className="pro m-5 md:m-0">
+           
+            <Link to="/product/dryfruits" className="pro m-5 md:m-0">
               <h2 className="py-0 md:py-1">Dry Fruits</h2>
-              <Link to="/product/dryfruits">
-                <img src={dryfruits} alt="" />
+              <img src={dryfruits} alt="" />
               </Link>
-            </div>
-            <div className="pro m-5 md:m-0">
+           
+            <Link to="/product/ghee" className="pro m-5 md:m-0">
               <h2 className="py-0 md:py-1">Ghee</h2>
-              <Link to="/product/ghee">
-                <img src={ghee} alt="" />
+              <img src={ghee} alt="" />
               </Link>
-            </div>
+           
           </div>
         </section>
       </main>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../admin.css";
 import { useMutation, gql } from "@apollo/client";
 const CREATE_PRODUCT_MUTATION = gql`
   mutation addProduct(
