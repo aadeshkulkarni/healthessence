@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 1em;
+}
+p {
+  padding: 0.1em;
+}
+
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+  /* height: 100%; */
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.glass {
+  background: white;
+  height: 90%;
+  width: 80%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2em;
+  z-index: 2;
+  backdrop-filter: blur(2em);
+}
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 20em;
+  width: 20em;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 10%;
+}
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2em;
+}
+.link {
+  display: flex;
+  margin: 2em 0em;
+  padding: 1em 5em;
+  align-items: center;
+}
+.link h2 {
+  padding: 0em 2em;
+}
+
+.games {
+  flex: 2;
+}
+
+.pro {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  border-radius: 1em;
+  color: white;
+  padding: 1em;
+  width: 80%;
+  cursor: pointer;
+  position: relative;
+}
+
+.pro:hover {
+  background: linear-gradient(to right top, #76ceb8, #5bcada);
+}
+
+.pro img {
+  position: absolute;
+  top: 15%;
+  right: -15%;
+  width: 128px;
+  height: 128px;
+  z-index: 1000;
+}
+.pro h2 {
+  width: 40%;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* GAMES */
+.status {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  width: 50%;
+  border-radius: 2em;
+}
+
+.main-body {
+  margin-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.games {
+  /* margin: 5em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  /* border-radius: 50%; */
+  border: 5em solid linear-gradient(to right top, #65dfc9, #6cdbeb);
+  /* margin: 2em 0em;
+  padding: 2em 5em; */
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+  width: 65vh;
+  height: 65vh;
+}
+
+.blink_me {
+  animation: blinker 5s linear infinite;
+  color: #75cfb8;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.progress {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  width: 100%;
+  height: 25%;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+}
+.progress::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(236, 236, 236);
+  position: absolute;
+  left: 60%;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.main-body input,
+.main-body select {
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  width: 80%;
+  font-size: 1em;
+  border-radius: 1em;
+  border: 0;
+}
+.main-body button {
+  padding: 1em 2em;
+  margin: 1em;
+  width: 80%;
+  font-size: 1em;
+  border-radius: 1em;
+  border: 0;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.percentage {
+  font-weight: bold;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

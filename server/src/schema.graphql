@@ -1,0 +1,52 @@
+type Query {
+  products(
+    filter: String
+    skip: Int
+    take: Int
+    orderBy: ProductOrderByInput
+  ): [Product]
+}
+
+type Product {
+  productName: String
+  productURL: String
+  productQty: String
+  category: String
+  postedBy: User
+}
+
+type AuthPayload {
+  token: String
+  user: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  products: [Product]!
+}
+
+input ProductOrderByInput {
+  productName: Sort
+  productURL: Sort
+  productQty: Sort
+  createdAt: Sort
+  category: Sort
+}
+
+enum Sort {
+  asc
+  desc
+}
+
+type Mutation {
+  addProduct(
+    productName: String
+    productURL: String
+    productQty: String
+    category: String
+  ): Product
+  signup(email: String!, password: String!, name: String!): AuthPayload
+  login(email: String!, password: String!): AuthPayload
+}
